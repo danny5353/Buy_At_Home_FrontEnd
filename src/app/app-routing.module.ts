@@ -5,19 +5,23 @@ import { ClienteComponent } from './home/cliente/cliente.component';
 import { RegistroComponent } from './home/registro/registro.component';
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
   },
   {
-    path: '',
+    path: 'cliente',
     component: ClienteComponent,
   },
   {
-    path: '',
+    path: 'registro',
     component: RegistroComponent,
   },
-  
+  {
+    path: '**',
+    component: HomeComponent,
+  } 
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
