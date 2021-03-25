@@ -11,36 +11,22 @@ import { NotificationsService} from 'angular2-notifications';
 export class SignupComponent implements OnInit {
 
   signup= {
-    firstname: '',
-    lastname: '',
-    phone: '',
-    email: '',
+    correo: '',
     password: '',
-    neighbourId: 0,
-    street: '',
-    number: '',
-    reference: ''
+    estado: '',
+    nombres: '',
+    apellidos: '',
+    fechaNacimiento: '',
+    telefono: '',
+    direccion: ''
   }
   errorMessage: any;
-  neighbour: any[] = [];
 
   alert = false;
   //modal: any[] = [];
 
-  constructor( private http: HttpClient, private router: Router,private service: NotificationsService ) { 
-    
-    this.http.get('http://localhost:8080/neighbour')
-      .subscribe((data: any) => {
-        this.neighbour = data;
-        this.neighbour.unshift({
-          neighbourId: '',
-          name: '[Seleccione una zona]'
-        })
-        console.log(this.neighbour);
-        }
-      ) 
-
-   }
+  constructor( private http: HttpClient, private router: Router,private service: NotificationsService ) {
+  }
 
   ngOnInit(): void {
     console.log(this.alert)
@@ -57,22 +43,21 @@ export class SignupComponent implements OnInit {
     } else {
       this.alert = false;
       console.log(this.alert)
-      this.signup.firstname = user.value.firstname;
-      this.signup.lastname = user.value.lastname;
-      this.signup.phone = user.value.phone;
-      this.signup.email = user.value.email;
+      this.signup.correo = user.value.correo;
       this.signup.password = user.value.password;
-      this.signup.neighbourId = parseInt(user.value.neighbourId);
-      this.signup.street = user.value.street;
-      this.signup.number = user.value.number;
-      this.signup.reference = user.value.reference;
+      this.signup.estado = user.value.estado;
+      this.signup.nombres = user.value.nombres;
+      this.signup.apellidos = user.value.apellidos;
+      this.signup.password = user.value.password;
+      this.signup.fechaNacimiento = user.value.fechaNacimiento;
+      this.signup.telefono = user.value.telefono;
+      this.signup.direccion = user.value.direccion;
 
       console.log(this.signup);
       console.log(user)
       console.log(this.alert)
 
-    this.http.post('http://localhost:8080/users/signup',this.signup)
-        
+    this.http.post('http://localhost:4200/api/cliente',this.signup)
           .subscribe({
             next: (data: any) => {
               this.signup = data;
