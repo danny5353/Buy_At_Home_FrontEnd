@@ -1,0 +1,42 @@
+<div class="card border-primary mb-3" >
+    
+    <div class="card-body text-primary">
+      <h5 class="card-title">Listado de usuarios</h5>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>rol</th>
+            <th>usuario</th>
+            <th>password</th>
+            <th>estado</th>
+            <th>nombres</th>
+            <th>apellidos</th>
+            <th>email</th>
+            <th>ci</th>
+            <th>telefono</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of usuarios">
+                <td>{{ usuario.idUsuario }}</td>
+                <td>{{ usuario.idRol }}</td>
+                <td>{{ usuario.usuario }}</td>
+                <td>{{ usuario.password }}</td>
+                <td>{{ usuario.estado }}</td>
+                <td>{{ usuario.nombres }}</td>
+                <td>{{ usuario.apellidos }}</td>
+                <td>{{ usuario.email}}</td>
+                <td>{{ usuario.ci }}</td>
+                <td>{{ usuario.telefono }}</td>
+                
+            </tr>
+          
+        </tbody>
+      </table>
+
+
+
+    </div>
+  </div>

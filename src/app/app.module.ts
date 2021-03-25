@@ -6,18 +6,24 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RegistroComponent } from './home/registro/registro.component';
 import { ClienteComponent } from './home/cliente/cliente.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import {UsuarioService } from './usuarios/usuario.service';
+import {HttpClientModule} from '@angular/common/http'
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     RegistroComponent,
-    ClienteComponent
+    ClienteComponent,
+    UsuariosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
