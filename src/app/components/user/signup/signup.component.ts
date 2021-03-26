@@ -45,7 +45,7 @@ export class SignupComponent implements OnInit {
       console.log(this.alert)
       this.signup.correo = user.value.correo;
       this.signup.password = user.value.password;
-      this.signup.estado = user.value.estado;
+      this.signup.estado = 1;
       this.signup.nombres = user.value.nombres;
       this.signup.apellidos = user.value.apellidos;
       this.signup.password = user.value.password;

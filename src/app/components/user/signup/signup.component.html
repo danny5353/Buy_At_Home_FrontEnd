@@ -37,15 +37,7 @@
                     <input type="password" name="password_confirm" class="form-control" ngModel #password_confirm="ngModel" id="inputRepeatPassword" required>
                 </div>
             </div>
-            <div class="form-group col-md-2">
-                <label for="inputNumber"># Estado</label>
-                <input type="text" class="form-control" id="inputEstado" name="estado" ngModel #estado="ngModel"
-                [class.is-invalid]="estado.invalid && estado.touched"
-                minlength="1"
-                pattern=".*\S+.*"
-                required >
-            <small class="form-text text-danger" *ngIf="estado.invalid && estado.touched">El campo es obligatorio</small>
-            </div>
+           
             <div class="form-group animated fadeIn fast">
                 <label for="inputFirstname">Nombres</label>
                 <input type="text" class="form-control" id="inputNombres" name="nombres" ngModel #nombres="ngModel"
