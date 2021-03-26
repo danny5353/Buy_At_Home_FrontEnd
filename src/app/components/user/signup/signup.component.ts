@@ -13,11 +13,11 @@ export class SignupComponent implements OnInit {
   signup= {
     correo: '',
     password: '',
-    estado: '',
+    estado: parseInt(''),
     nombres: '',
     apellidos: '',
-    fechaNacimiento: '',
-    telefono: '',
+    fechaNacimiento: Date,
+    telefono: parseInt(''),
     direccion: ''
   }
   errorMessage: any;
@@ -49,7 +49,7 @@ export class SignupComponent implements OnInit {
       this.signup.nombres = user.value.nombres;
       this.signup.apellidos = user.value.apellidos;
       this.signup.password = user.value.password;
-      this.signup.fechaNacimiento = user.value.fechaNacimiento;
+      this.signup.fechaNacimiento= user.value.fechaNacimiento
       this.signup.telefono = user.value.telefono;
       this.signup.direccion = user.value.direccion;
 
@@ -57,7 +57,7 @@ export class SignupComponent implements OnInit {
       console.log(user)
       console.log(this.alert)
 
-    this.http.post('http://localhost:4200/api/cliente',this.signup)
+    this.http.post('http://localhost:8080/api/clientes',this.signup)
           .subscribe({
             next: (data: any) => {
               this.signup = data;

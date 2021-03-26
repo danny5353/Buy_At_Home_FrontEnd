@@ -40,11 +40,6 @@ import { ListproductComponent } from './components/product/listproduct/listprodu
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
 import { ListproductcategoryComponent } from './components/product/listproductcategory/listproductcategory.component';
-import { LoginComponent } from './login/login.component';
-import { LogComponent } from './user/log/log.component';
-
-
-
 
 @NgModule({
   declarations: [
@@ -70,8 +65,7 @@ import { LogComponent } from './user/log/log.component';
     CheckoutComponent,
     ProductDetailComponent,
     ListproductcategoryComponent,
-    LoginComponent,
-    LogComponent
+   
 
   ],
   imports: [

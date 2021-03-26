@@ -20,8 +20,6 @@ import { ListproductComponent } from './components/product/listproduct/listprodu
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
 import { ListproductcategoryComponent } from './components/product/listproductcategory/listproductcategory.component';
-import { LoginComponent } from './components/user/login/login.component';
-
 
 
 const APP_ROUTES: Routes = [
@@ -33,7 +31,6 @@ const APP_ROUTES: Routes = [
     { path: 'user/:userId/orders/:orderId', component: OrderDetailComponent },
     { path: 'user/:id/edit', component: UserEditComponent },
     { path: 'user/cart', component: CartComponent },
-    { path: 'user/login', component: LoginComponent },
     { path: 'user/payment', component: PaymentComponent },
     { path: 'createOrder/orderadd', component: OrderaddComponent },
     { path: 'product/addproduct', component: AddproductComponent},
