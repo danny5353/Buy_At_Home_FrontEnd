@@ -50,6 +50,10 @@ import { ModalComponent } from './modal/modal.component';
 import { LoginclienteComponent } from './logincliente/logincliente.component';
 import { HomeadminComponent } from './homeadmin/homeadmin.component';
 import { NavbaradminComponent } from './navbaradmin/navbaradmin.component';
+import { HomepersonalventasComponent } from './homepersonalventas/homepersonalventas.component';
+import { HomeencargadoenviosComponent } from './homeencargadoenvios/homeencargadoenvios.component';
+import { NavbarenviosComponent } from './navbarenvios/navbarenvios.component';
+import { NavbarventasComponent } from './navbarventas/navbarventas.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +85,11 @@ import { NavbaradminComponent } from './navbaradmin/navbaradmin.component';
     ModalComponent,
     LoginclienteComponent,
     HomeadminComponent,
-    NavbaradminComponent
+    NavbaradminComponent,
+    HomepersonalventasComponent,
+    HomeencargadoenviosComponent,
+    NavbarenviosComponent,
+    NavbarventasComponent
     ],
   imports: [
     BrowserModule,
