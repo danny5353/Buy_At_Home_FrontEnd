@@ -48,6 +48,8 @@ import { ClientesComponent } from './components/clientes/clientes.component';
 import {ClienteService } from './components/clientes/cliente.service';
 import { ModalComponent } from './modal/modal.component';
 import { LoginclienteComponent } from './logincliente/logincliente.component';
+import { HomeadminComponent } from './homeadmin/homeadmin.component';
+import { NavbaradminComponent } from './navbaradmin/navbaradmin.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +79,9 @@ import { LoginclienteComponent } from './logincliente/logincliente.component';
     UsuariosComponent,
     ClientesComponent,
     ModalComponent,
-    LoginclienteComponent
+    LoginclienteComponent,
+    HomeadminComponent,
+    NavbaradminComponent
     ],
   imports: [
     BrowserModule,
