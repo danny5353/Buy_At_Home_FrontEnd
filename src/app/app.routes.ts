@@ -20,6 +20,8 @@ import { ListproductComponent } from './components/product/listproduct/listprodu
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
 import { ListproductcategoryComponent } from './components/product/listproductcategory/listproductcategory.component';
+import {UsuariosComponent} from './components/usuarios/usuarios.component';
+import {ClientesComponent} from './components/clientes/clientes.component';
 
 
 const APP_ROUTES: Routes = [
@@ -44,6 +46,8 @@ const APP_ROUTES: Routes = [
     { path: 'checkout', component: CheckoutComponent },
     { path: 'product/:productId', component: ProductDetailComponent },
     { path: 'products/category/:id', component: ListproductcategoryComponent },
+    { path: 'usuarios', component: UsuariosComponent},
+    { path: 'clientes', component: ClientesComponent},
     
     { path: '**', pathMatch: 'full', redirectTo: 'home' }//redirectTo: 'home'
 ];

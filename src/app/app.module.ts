@@ -40,6 +40,10 @@ import { ListproductComponent } from './components/product/listproduct/listprodu
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
 import { ListproductcategoryComponent } from './components/product/listproductcategory/listproductcategory.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import {UsuarioService } from './components/usuarios/usuario.service';
+import { ClientesComponent } from './components/clientes/clientes.component';
+import {ClienteService } from './components/clientes/cliente.service';
 
 @NgModule({
   declarations: [
@@ -65,6 +69,8 @@ import { ListproductcategoryComponent } from './components/product/listproductca
     CheckoutComponent,
     ProductDetailComponent,
     ListproductcategoryComponent,
+    UsuariosComponent,
+    ClientesComponent
    
 
   ],
@@ -78,7 +84,7 @@ import { ListproductcategoryComponent } from './components/product/listproductca
     BrowserAnimationsModule,
     APP_ROUTING
   ],
-  providers: [UserService, VoucherService],
+  providers: [UserService, VoucherService,UsuarioService,ClienteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
