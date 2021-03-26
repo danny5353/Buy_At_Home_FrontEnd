@@ -3,11 +3,12 @@ import { NgModule } from '@angular/core';
 //Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from "@angular/router";
 import { HttpClientModule } from '@angular/common/http';
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 //Routes
 import { APP_ROUTING } from "./app.routes";
@@ -46,6 +47,7 @@ import {UsuarioService } from './components/usuarios/usuario.service';
 import { ClientesComponent } from './components/clientes/clientes.component';
 import {ClienteService } from './components/clientes/cliente.service';
 import { ModalComponent } from './modal/modal.component';
+import { LoginclienteComponent } from './logincliente/logincliente.component';
 
 @NgModule({
   declarations: [
@@ -75,10 +77,8 @@ import { ModalComponent } from './modal/modal.component';
     UsuariosComponent,
     ClientesComponent,
     ModalComponent,
-    
-   
-
-  ],
+    LoginclienteComponent
+    ],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -87,6 +87,8 @@ import { ModalComponent } from './modal/modal.component';
     AppRoutingModule,
     SimpleNotificationsModule.forRoot(),
     BrowserAnimationsModule,
+    NgbModule,
+    ReactiveFormsModule,
     APP_ROUTING
   ],
   providers: [UserService, VoucherService,UsuarioService,ClienteService],

@@ -1,18 +1,145 @@
-<h1>Modal Bienvenido</h1>
+<h1>Modal</h1>
 <hr>
-<ng-template #contenido lef-modal>
+<ng-template #contenido let-modal>
     <div class="modal-header">
-        <h4 class="modal-title">Tutilo Modal</h4>
-        <button class="close" aria-label="close" type="button" >     <!--(click)="modal.dismiss() " -->
+        <h4 class="modal-title">Titulo Modal</h4>
+        <button class="close" aria-label="close" type="button" (click)="modal.dismiss()">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
     <div class="modal-body">
-        Este es el Contenido del  modal.
+        Este es el contenido de este modal.
+        Este es el contenido de este modal.
+        Este es el contenido de este modal.
+        Este es el contenido de este modal.
+        Este es el contenido de este modal.
+        Este es el contenido de este modal.
+        Este es el contenido de este modal.
+        Este es el contenido de este modal.
+        Este es el contenido de este modal.
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-sucess"  > >OK!</button>   <!--(click)="modal.close()" -->
+        <button type="button" class="btn btn-success" (click)="modal.close()">Ok!</button>
     </div>
 </ng-template>
 
-<button type="button" class="btn btn-outline-danger"  >Lanza modal!</button>   <!--(click)="modal.open(contenido)" -->
+<button type="button" class="btn btn-outline-danger" (click)="openSM(contenido)">lanzar modal SM</button>
+<button type="button" class="btn btn-outline-success" (click)="openLG(contenido)">lanzar modal LG</button>
+<button type="button" class="btn btn-outline-secondary" (click)="openXL(contenido)">lanzar modal XL</button>
+<button type="button" class="btn btn-outline-primary" (click)="openCentrado(contenido)">lanzar modal centrado</button>
+<button type="button" class="btn btn-outline-warning" (click)="openScroll(contenido)">lanzar modal scroll</button>
+<hr>
+<button type="button" class="btn btn-outline-info" (click)="openBackground(contenido)">lanzar modal openBackground</button>
+<button type="button" class="btn btn-outline-dark" (click)="openWindow(contenido)">lanzar modal window</button>
+
+
+
+<h1>Dropdown</h1>
+<hr>
+<div class="row">
+    <div class="col-6">
+<div ngbDropdown class="d.inline.block">
+    <button class="btn btn-success" ngbDropdownToggle id="midrop1">Mi dropdown</button>
+    <div ngbDropdownMenu aria-labelledby="midrop1">
+        <button ngbDropdownItem>item 1</button>
+        <button ngbDropdownItem>item 2</button>
+        <button ngbDropdownItem>item 3</button>
+    </div>
+</div>
+    </div>
+
+    <div class="col-6">
+        <div ngbDropdown class="d.inline.block" placement="left">
+            <button class="btn btn-danger" ngbDropdownToggle id="midrop1">Mi dropdown</button>
+            <div ngbDropdownMenu aria-labelledby="midrop1">
+                <button ngbDropdownItem>item 1</button>
+                <button ngbDropdownItem>item 2</button>
+                <button ngbDropdownItem>item 3</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+<div class="row">
+    <div class="col-4">
+        <div ngbDropdown #mimenu="ngbDropdown" class="d.inline.block" placement="top">
+            <button class="btn btn-danger" ngbDropdownToggle id="midrop1">Mi dropdown</button>
+            <div ngbDropdownMenu aria-labelledby="midrop1">
+                <button ngbDropdownItem>item 1</button>
+                <button ngbDropdownItem>item 2</button>
+                <button ngbDropdownItem>item 3</button>
+            </div>
+        </div>
+    </div>  
+    <div class="col-4">
+        <button class="btn btn-outline-primary" (click)="mimenu.open();">Abrir fuera</button>
+    </div> 
+    <div class="col-4">
+        <button class="btn btn-outline-warning" (click)="mimenu.close()">Cerrar fuera</button>
+    </div> 
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col 6">
+        <div ngbDropdown class="btn-group" role="group" placement="bottom">
+            <button type="button" class="btn btn-secondary">Dividido</button>
+            <button class="btn btn-secondary dropdown-toggle-split" ngbDropdownToggle id="midrop1"></button>
+            <div ngbDropdownMenu aria-labelledby="midrop1">
+                <button ngbDropdownItem>item 1</button>
+                <button ngbDropdownItem>item 2</button>
+                <button ngbDropdownItem>item 3</button>
+            </div>
+        </div>  
+    </div>
+    <div class="col 6">
+<div class="btn-group">
+    <div ngbDropdown class="btn-group" role="group" placement="bottom">
+        <button class="btn btn-outline-warning" ngbDropdownToggle id="midrop1">Abreme</button>
+        <div ngbDropdownMenu aria-labelledby="midrop1">
+            <button ngbDropdownItem>item 1</button>
+            <button ngbDropdownItem>item 2</button>
+            <button ngbDropdownItem>item 3</button>
+        </div>
+    </div>
+    <div ngbDropdown class="btn-group" role="group" placement="bottom">
+        <button class="btn btn-outline-primary" ngbDropdownToggle id="midrop1">mejor a mi</button>
+        <div ngbDropdownMenu aria-labelledby="midrop1">
+            <button ngbDropdownItem>item 1</button>
+            <button ngbDropdownItem>item 2</button>
+            <button ngbDropdownItem>item 3</button>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+  <hr>
+  <div class="row">
+    <div ngbDropdown class="d.inline.block" placement="right">
+        <button class="btn btn-outline-success" ngbDropdownToggle id="midrop1">Mi dropdown</button>
+        <div ngbDropdownMenu aria-labelledby="midrop1">
+            <form class="px-4 py-3">
+                <div class="form-group">
+                  <label for="exampleDropdownFormEmail1">Correo Electrónico</label>
+                  <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                </div>
+                <div class="form-group">
+                  <label for="exampleDropdownFormPassword1">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                  <label class="form-check-label" for="dropdownCheck">
+                    Recuerdame
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Log in</button>
+              </form>
+              <hr>
+              <button ngbDropdownItem>Registrar</button>
+              <button ngbDropdownItem>Olvidé mi contraseña</button>
+        </div>
+    </div> 
+  </div>
