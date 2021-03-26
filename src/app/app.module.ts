@@ -45,6 +45,7 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import {UsuarioService } from './components/usuarios/usuario.service';
 import { ClientesComponent } from './components/clientes/clientes.component';
 import {ClienteService } from './components/clientes/cliente.service';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import {ClienteService } from './components/clientes/cliente.service';
     ListproductcategoryComponent,
     UsuariosComponent,
     ClientesComponent,
+    ModalComponent,
     
    
 
