@@ -14,7 +14,8 @@ import { CatalogueComponent } from './components/category/catalogue/catalogue.co
 import { GetproductsComponent} from './components/product/getproducts/getproducts.component';
 import { PaymentComponent } from './components/user/payment/payment.component';
 import { OrderaddComponent } from './components/createOrder/orderadd/orderadd.component';
-import { FormComponent } from './components/voucher/listvoucher/form.component';
+import { FormComponent } from './components/usuarios/form.component';
+import { FormeditComponent } from './components/usuarios/formedit.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListproductComponent } from './components/product/listproduct/listproduct.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
@@ -40,7 +41,7 @@ const APP_ROUTES: Routes = [
     { path: 'product/editproduct/:productId', component: EditproductComponent},
     { path: 'voucher/listvoucher', component: ListvoucherComponent},
     { path: 'product/getproducts', component: GetproductsComponent},
-    { path: 'listvoucher/form', component: FormComponent},
+    { path: 'usuarios/form', component: FormComponent},
     { path: 'listvoucher/form/:voucherId', component: FormComponent},
     { path: 'products', component: ListproductComponent},
     { path: 'checkout', component: CheckoutComponent },
@@ -48,6 +49,8 @@ const APP_ROUTES: Routes = [
     { path: 'products/category/:id', component: ListproductcategoryComponent },
     { path: 'usuarios', component: UsuariosComponent},
     { path: 'clientes', component: ClientesComponent},
+    { path: 'usuarios/formedit', component: FormeditComponent},
+    { path: 'usuarios/formedit/:voucherId', component: FormeditComponent},
     
     { path: '**', pathMatch: 'full', redirectTo: 'home' }//redirectTo: 'home'
 ];

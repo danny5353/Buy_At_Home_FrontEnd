@@ -33,7 +33,8 @@ import { CatalogueComponent } from './components/category/catalogue/catalogue.co
 import { from } from 'rxjs';
 import { PaymentComponent } from './components/user/payment/payment.component';
 import { OrderaddComponent } from './components/createOrder/orderadd/orderadd.component';
-import { FormComponent } from './components/voucher/listvoucher/form.component';
+import { FormComponent } from './components/usuarios/form.component';
+import { FormeditComponent } from './components/usuarios/formedit.component';
 import { GetproductsComponent } from './components/product/getproducts/getproducts.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListproductComponent } from './components/product/listproduct/listproduct.component';
@@ -64,13 +65,15 @@ import {ClienteService } from './components/clientes/cliente.service';
     PaymentComponent,
     OrderaddComponent,
     FormComponent,
+    FormeditComponent,
     HomeComponent,
     ListproductComponent,
     CheckoutComponent,
     ProductDetailComponent,
     ListproductcategoryComponent,
     UsuariosComponent,
-    ClientesComponent
+    ClientesComponent,
+    
    
 
   ],
