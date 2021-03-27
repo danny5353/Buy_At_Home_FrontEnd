@@ -54,6 +54,7 @@ import { HomepersonalventasComponent } from './homepersonalventas/homepersonalve
 import { HomeencargadoenviosComponent } from './homeencargadoenvios/homeencargadoenvios.component';
 import { NavbarenviosComponent } from './navbarenvios/navbarenvios.component';
 import { NavbarventasComponent } from './navbarventas/navbarventas.component';
+import { LoginadminComponent } from './loginadmin/loginadmin.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +90,8 @@ import { NavbarventasComponent } from './navbarventas/navbarventas.component';
     HomepersonalventasComponent,
     HomeencargadoenviosComponent,
     NavbarenviosComponent,
-    NavbarventasComponent
+    NavbarventasComponent,
+    LoginadminComponent
     ],
   imports: [
     BrowserModule,

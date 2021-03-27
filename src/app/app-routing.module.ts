@@ -8,6 +8,7 @@ import { HomepersonalventasComponent } from './homepersonalventas/homepersonalve
 import { NavbaradminComponent } from './navbaradmin/navbaradmin.component';
 import { NavbarenviosComponent } from './navbarenvios/navbarenvios.component';
 import { NavbarventasComponent } from './navbarventas/navbarventas.component';
+import { LoginadminComponent } from './loginadmin/loginadmin.component';
 const routes: Routes = [
   {
     path: 'modal',
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path: 'logincliente',
     component: LoginclienteComponent,
+  },
+  {
+    path: 'loginadmin',
+    component: LoginadminComponent,
   }
 ];
 
