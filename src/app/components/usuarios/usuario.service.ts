@@ -25,11 +25,11 @@ export class UsuarioService {
     create(usuario: Usuario) : Observable<any> {
         return this.http.post<any>(this.urlEndPoint, usuario, {headers: this.httpHeaders}).pipe(
             catchError(e => {
-                if(e.status==400){
+                /*if(e.status==400){
                     return throwError(e);
-                }
+                }*/
                 console.error(e.error.mensaje);
-                swal.fire(e.error.mensaje, e.error.error, 'error');
+                swal.fire('Error al crear usuario',e.error.mensaje, 'error');
                 return throwError(e);
             })
         )
@@ -48,12 +48,12 @@ export class UsuarioService {
     update(usuario: Usuario): Observable<any>{
         return this.http.put<any>(`${this.urlEndPoint}/${usuario.idUsuario}`, usuario, {headers: this.httpHeaders}).pipe(
             catchError(e => {
-                if(e.status==400){
+                /*if(e.status==400){
                     return throwError(e);
-                }
+                }*/
 
                 console.error(e.error.mensaje);
-                swal.fire(e.error.mensaje, e.error.error, 'error');
+                swal.fire('Error al editar usuario', e.error.error, 'error');
                 return throwError(e);
             })
         );
@@ -63,7 +63,7 @@ export class UsuarioService {
         return this.http.delete<Usuario>(`${this.urlEndPoint}/${idUsuario}`, {headers: this.httpHeaders}).pipe(
             catchError(e => {
                 console.error(e.error.mensaje);
-                swal.fire(e.error.mensaje, e.error.error, 'error');
+                swal.fire('error al eliminar usuario', e.error.error, 'error');
                 return throwError(e);
             })
         );    

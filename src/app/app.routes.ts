@@ -50,7 +50,7 @@ const APP_ROUTES: Routes = [
     { path: 'usuarios', component: UsuariosComponent},
     { path: 'clientes', component: ClientesComponent},
     { path: 'usuarios/formedit', component: FormeditComponent},
-    { path: 'usuarios/formedit/:voucherId', component: FormeditComponent},
+    { path: 'usuarios/formedit/:idUsuario', component: FormeditComponent},
     
     { path: '**', pathMatch: 'full', redirectTo: 'home' }//redirectTo: 'home'
 ];

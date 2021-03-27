@@ -23,11 +23,11 @@ export class FormComponent implements OnInit {
         
     }
 
-    create(): void{
+    create(): void{ 
         this.usuarioService.create(this.usuario)
         .subscribe(json => {
                 this.router.navigate(['/usuarios'])
-                swal.fire('Nuevo Usuario', `${json.mensaje} # ${json.usuario.nombres}`, 'success') 
+                swal.fire('Nuevo Usuario', `${json.mensaje} `, 'success') 
         },
         err => {
             console.error('Codigo de error desde el backend: '+err.error.errors);

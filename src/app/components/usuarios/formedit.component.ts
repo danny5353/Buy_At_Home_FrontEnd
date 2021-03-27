@@ -35,7 +35,7 @@ export class FormeditComponent implements OnInit {
         this.usuarioService.update(this.usuario)
         .subscribe( json => {
             this.router.navigate(['/usuarios'])
-            swal.fire('Usuario Actualizado', `${json.mensaje} # ${json.usuario.idUsuario}`, 'success') 
+            swal.fire('Usuario Actualizado', `${json.mensaje}`, 'success') 
         },
         err => {
             console.error('Codigo de error desde el backend: '+err.error.errors);
