@@ -11,9 +11,9 @@
         <thead>
             <tr>
                 <th>id</th>
-                <th>rol</th>
+                
                 <th>usuario</th>
-                <th>password</th>
+               
                 <th>estado</th>
                 <th>nombres</th>
                 <th>apellidos</th>
@@ -32,15 +32,14 @@
         <tbody>
             <tr *ngFor="let usuario of usuarios">
                 <td>{{ usuario.idUsuario }}</td>
-                <td>{{ usuario.idRol }}</td>
-                <td>{{ usuario.usuario }}</td>
-                <td>{{ usuario.password }}</td>
+                <td>{{ usuario.username }}</td>
                 <td>{{ usuario.estado }}</td>
                 <td>{{ usuario.nombres }}</td>
                 <td>{{ usuario.apellidos }}</td>
                 <td>{{ usuario.email}}</td>
                 <td>{{ usuario.ci }}</td>
                 <td>{{ usuario.telefono }}</td>
+                
                 <td>
                     <button type="button" name="editar" [routerLink]="['/usuarios/formedit', usuario.idUsuario]" class="btn btn-primary">editar</button>
                 </td>

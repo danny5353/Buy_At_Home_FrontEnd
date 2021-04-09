@@ -3,22 +3,12 @@
     
     <div class="card-body">
         <form (ngSubmit) = "update()">
-          <div class="form-group row">
-            <label for="idRol" class="col-form-label col-sm-2">Rol</label>
-            <div class="col-sm-6">
-              <input type="text" class="form-control" [(ngModel)]="usuario.idRol" name="idRol" ngModel #idRol="ngModel"
-              [class.is-invalid]="idRol.invalid && idRol.touched"
-              minlength="1"
-              pattern=".*\S+.*"
-              required >
-          <small class="form-text text-danger" *ngIf="idRol.invalid && idRol.touched">El campo es obligatorio</small>
-            </div>
-          </div>
+          
     
           <div class="form-group row">
             <label for="usuario" class="col-form-label col-sm-2">Usuario</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" [(ngModel)]="usuario.usuario" name="usuario"ngModel #usua="ngModel"
+              <input type="text" class="form-control" [(ngModel)]="usuario.username" name="usuario"ngModel #usua="ngModel"
             [class.is-invalid]="usua.invalid && usua.touched"
             minlength="1"
             pattern=".*\S+.*"
