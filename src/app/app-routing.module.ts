@@ -9,8 +9,9 @@ import { NavbaradminComponent } from './navbaradmin/navbaradmin.component';
 import { NavbarenviosComponent } from './navbarenvios/navbarenvios.component';
 import { NavbarventasComponent } from './navbarventas/navbarventas.component';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
-import { AgregarprodcutosComponent } from './agregarprodcutos/agregarprodcutos.component';
-import { ObtenerPrductoComponent } from './obtener-prducto/obtener-prducto.component';
+import { ObtenerproductoComponent } from './obtenerproducto/obtenerproducto.component';
+import { EditarproductoComponent } from './editarproducto/editarproducto.component';
+
 const routes: Routes = [
   {
     path: 'modal',
@@ -49,16 +50,12 @@ const routes: Routes = [
     component: LoginadminComponent,
   },
   {
-    path: 'agregarprodcutos',
-    component: AgregarprodcutosComponent,
-  },
-  {
     path: 'editarproducto',
-    component: AgregarprodcutosComponent,
+    component: EditarproductoComponent,
   },
   {
     path: 'obtenerprodcuto',
-    component: ObtenerPrductoComponent,
+    component: ObtenerproductoComponent,
   }
 ];
 

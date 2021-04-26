@@ -5,11 +5,11 @@ import { ActivatedRoute } from "@angular/router";
 import { NotificationsService} from 'angular2-notifications';
 
 @Component({
-  selector: 'app-editproduct',
-  templateUrl: './editproduct.component.html',
-  styleUrls: ['./editproduct.component.css']
+  selector: 'app-editarproducto',
+  templateUrl: './editarproducto.component.html',
+  styleUrls: ['./editarproducto.component.css']
 })
-export class EditproductComponent implements OnInit {
+export class EditarproductoComponent implements OnInit {
   product: any[] = [];
   producto: any[] = [];
   

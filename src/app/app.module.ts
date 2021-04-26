@@ -55,9 +55,10 @@ import { HomeencargadoenviosComponent } from './homeencargadoenvios/homeencargad
 import { NavbarenviosComponent } from './navbarenvios/navbarenvios.component';
 import { NavbarventasComponent } from './navbarventas/navbarventas.component';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
-import { AgregarprodcutosComponent } from './agregarprodcutos/agregarprodcutos.component';
 import { EditarproductoComponent } from './editarproducto/editarproducto.component';
-import { ObtenerPrductoComponent } from './obtener-prducto/obtener-prducto.component';
+import { ObtenerproductoComponent } from './obtenerproducto/obtenerproducto.component';
+import { AgregarproductoComponent } from './agregarproducto/agregarproducto.component';
+
 
 @NgModule({
   declarations: [
@@ -95,9 +96,9 @@ import { ObtenerPrductoComponent } from './obtener-prducto/obtener-prducto.compo
     NavbarenviosComponent,
     NavbarventasComponent,
     LoginadminComponent,
-    AgregarprodcutosComponent,
     EditarproductoComponent,
-    ObtenerPrductoComponent
+    ObtenerproductoComponent,
+    AgregarproductoComponent
     ],
   imports: [
     BrowserModule,
