@@ -58,6 +58,7 @@ import { LoginadminComponent } from './loginadmin/loginadmin.component';
 import { EditarproductoComponent } from './editarproducto/editarproducto.component';
 import { ObtenerproductoComponent } from './obtenerproducto/obtenerproducto.component';
 import { AgregarproductoComponent } from './agregarproducto/agregarproducto.component';
+import { ListaPComponent } from './lista-p/lista-p.component';
 
 
 @NgModule({
@@ -98,7 +99,8 @@ import { AgregarproductoComponent } from './agregarproducto/agregarproducto.comp
     LoginadminComponent,
     EditarproductoComponent,
     ObtenerproductoComponent,
-    AgregarproductoComponent
+    AgregarproductoComponent,
+    ListaPComponent
     ],
   imports: [
     BrowserModule,
