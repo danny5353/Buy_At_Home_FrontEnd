@@ -59,6 +59,7 @@ import { EditarproductoComponent } from './editarproducto/editarproducto.compone
 import { ObtenerproductoComponent } from './obtenerproducto/obtenerproducto.component';
 import { AgregarproductoComponent } from './agregarproducto/agregarproducto.component';
 import { ListaPComponent } from './lista-p/lista-p.component';
+import { DatalleproductoComponent } from './datalleproducto/datalleproducto.component';
 
 
 @NgModule({
@@ -100,7 +101,8 @@ import { ListaPComponent } from './lista-p/lista-p.component';
     EditarproductoComponent,
     ObtenerproductoComponent,
     AgregarproductoComponent,
-    ListaPComponent
+    ListaPComponent,
+    DatalleproductoComponent
     ],
   imports: [
     BrowserModule,
