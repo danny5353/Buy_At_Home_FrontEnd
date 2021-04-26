@@ -50,6 +50,10 @@ const routes: Routes = [
   {
     path: 'agregarprodcutos',
     component: AgregarprodcutosComponent,
+  },
+  {
+    path: 'editarproducto',
+    component: AgregarprodcutosComponent,
   }
 ];
 
