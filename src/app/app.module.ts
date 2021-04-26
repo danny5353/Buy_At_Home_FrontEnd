@@ -56,6 +56,7 @@ import { NavbarenviosComponent } from './navbarenvios/navbarenvios.component';
 import { NavbarventasComponent } from './navbarventas/navbarventas.component';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
 import { AgregarprodcutosComponent } from './agregarprodcutos/agregarprodcutos.component';
+import { EditarproductoComponent } from './editarproducto/editarproducto.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +94,8 @@ import { AgregarprodcutosComponent } from './agregarprodcutos/agregarprodcutos.c
     NavbarenviosComponent,
     NavbarventasComponent,
     LoginadminComponent,
-    AgregarprodcutosComponent
+    AgregarprodcutosComponent,
+    EditarproductoComponent
     ],
   imports: [
     BrowserModule,
