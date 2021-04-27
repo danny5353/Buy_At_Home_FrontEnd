@@ -20,7 +20,8 @@
           </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let cliente of clientes">
+            <tr *ngFor="let cliente of clientes  ">
+
                 <td>{{ cliente.idCliente }}</td>
                 <td>{{ cliente.correo }}</td>
                 <td>{{ cliente.estado }}</td>
@@ -32,15 +33,14 @@
                 <td>
                   <button type="button" name="eliminar" (click)='delete(cliente)' class="btn btn-danger btn-sm">eliminar</button>
                 </td>
-                
-
             </tr>
-
         </tbody>
       </table>
-
-
-
     </div>
 </div> 
+<!-- <tr *ngFor="let cliente of clientes ; let i = index ; let p = last ">
+  <li *ngIf="p">
+    {{i}} - {{ cliente.correo }}
+  </li>
+</tr> -->
 

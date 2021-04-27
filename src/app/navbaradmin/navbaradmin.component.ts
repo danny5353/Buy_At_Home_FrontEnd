@@ -5,8 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './navbaradmin.component.html',
 })
 export class NavbaradminComponent implements OnInit {
-
-  constructor() { }
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
   }
