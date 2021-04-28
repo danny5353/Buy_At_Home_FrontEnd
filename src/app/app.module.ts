@@ -58,12 +58,9 @@ import { LoginadminComponent } from './loginadmin/loginadmin.component';
 import { EditarproductoComponent } from './editarproducto/editarproducto.component';
 import { ObtenerproductoComponent } from './obtenerproducto/obtenerproducto.component';
 import { AgregarproductoComponent } from './agregarproducto/agregarproducto.component';
-<<<<<<< HEAD
 import { RolesnavbarComponent } from './rolesnavbar/rolesnavbar.component';
-=======
 import { ListaPComponent } from './lista-p/lista-p.component';
 import { DatalleproductoComponent } from './datalleproducto/datalleproducto.component';
->>>>>>> 268aeb5cc6b35f8ee9c83dc2ac8ce8c3e99753bc
 
 
 @NgModule({
@@ -105,12 +102,10 @@ import { DatalleproductoComponent } from './datalleproducto/datalleproducto.comp
     EditarproductoComponent,
     ObtenerproductoComponent,
     AgregarproductoComponent,
-<<<<<<< HEAD
-    RolesnavbarComponent
-=======
+    RolesnavbarComponent,
     ListaPComponent,
     DatalleproductoComponent
->>>>>>> 268aeb5cc6b35f8ee9c83dc2ac8ce8c3e99753bc
+
     ],
   imports: [
     BrowserModule,
