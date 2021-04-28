@@ -10,9 +10,10 @@ import { NavbarenviosComponent } from './navbarenvios/navbarenvios.component';
 import { NavbarventasComponent } from './navbarventas/navbarventas.component';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
 import { ObtenerproductoComponent } from './obtenerproducto/obtenerproducto.component';
-import { AgregarproductoComponent } from './agregarproducto/agregarproducto.component';
-import { RolesnavbarComponent } from './rolesnavbar/rolesnavbar.component';
-import { EditproductComponent } from './components/product/editproduct/editproduct.component';
+import { EditarproductoComponent } from './editarproducto/editarproducto.component';
+import { ListaPComponent } from './lista-p/lista-p.component';
+import { DatalleproductoComponent } from './datalleproducto/datalleproducto.component';
+
 
 const routes: Routes = [
   {
@@ -52,21 +53,21 @@ const routes: Routes = [
     component: LoginadminComponent,
   },
   {
+    path: 'editarproducto',
+    component: EditarproductoComponent,
+  },
+  {
     path: 'obtenerprodcuto',
     component: ObtenerproductoComponent,
   },
   {
-    path: 'agregarproducto',
-    component: AgregarproductoComponent,
+    path: 'lista-p',
+    component: ListaPComponent,
   },
   {
-    path: 'rolesnavbar',
-    component: RolesnavbarComponent,
-  },
-  {
-    path: 'editproduct',
-    component: EditproductComponent,
-  },
+    path: 'datalleproducto',
+    component: DatalleproductoComponent,
+  }
 ];
 
 @NgModule({
