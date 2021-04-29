@@ -13,6 +13,7 @@ import { ObtenerproductoComponent } from './obtenerproducto/obtenerproducto.comp
 import { EditarproductoComponent } from './editarproducto/editarproducto.component';
 import { ListaPComponent } from './lista-p/lista-p.component';
 import { DatalleproductoComponent } from './datalleproducto/datalleproducto.component';
+import { EditproductComponent } from './components/product/editproduct/editproduct.component';
 
 
 const routes: Routes = [
@@ -53,10 +54,6 @@ const routes: Routes = [
     component: LoginadminComponent,
   },
   {
-    path: 'editarproducto',
-    component: EditarproductoComponent,
-  },
-  {
     path: 'obtenerprodcuto',
     component: ObtenerproductoComponent,
   },
@@ -67,6 +64,10 @@ const routes: Routes = [
   {
     path: 'datalleproducto',
     component: DatalleproductoComponent,
+  },  
+  {
+    path: 'editproduct',
+    component: EditproductComponent,
   }
 ];
 
