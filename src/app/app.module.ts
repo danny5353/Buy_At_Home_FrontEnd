@@ -63,6 +63,7 @@ import { ListaPComponent } from './lista-p/lista-p.component';
 import { DatalleproductoComponent } from './datalleproducto/datalleproducto.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -104,7 +105,7 @@ import { DatalleproductoComponent } from './datalleproducto/datalleproducto.comp
     AgregarproductoComponent,
     RolesnavbarComponent,
     ListaPComponent,
-    DatalleproductoComponent
+    DatalleproductoComponent,
     ],
   imports: [
     BrowserModule,
