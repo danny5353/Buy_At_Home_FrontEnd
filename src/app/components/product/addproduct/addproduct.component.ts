@@ -11,28 +11,20 @@ import { NotificationsService} from 'angular2-notifications';
 export class AddproductComponent implements OnInit{ 
   
   product = {
-    brandId: parseInt(''),
     productName: '',
-    tagId: parseInt(''),
     detail: '',
     model: '',
     price: parseFloat(''),
     stock: parseInt(''),
     description: '',
-    storeAvailable: true,
-    deliveryAvailable: true,
+    storeAvailable: 1,
+    deliveryAvailable: 1,
     image: ''
 
   }
-  brand: any[] = [];
   errorMessage: any;
   constructor(private http:HttpClient,private service: NotificationsService) { 
-    this.http.get('http://localhost:8080/products/brand')
-      .subscribe((data: any) => {
-        this.brand = data;
-        console.log(this.brand);
-        }
-      ) 
+    
    
   }
   
@@ -46,18 +38,16 @@ export class AddproductComponent implements OnInit{
       if(prod.value.deliveryAvailable === "true")
       {
         this.product.image= prod.value.image
-        this.product.brandId= prod.value.brandId
         this.product.productName= prod.value.nameProduct
-        this.product.tagId= prod.value.tag
         this.product.detail= prod.value.detail
         this.product.model= prod.value.model
         this.product.price= prod.value.price
         this.product.stock= prod.value.stock
         this.product.description= prod.value.description
-        this.product.storeAvailable= true
-        this.product.deliveryAvailable= true
+        this.product.storeAvailable= 1
+        this.product.deliveryAvailable= 1
         
-        this.http.post('http://localhost:8080/products',this.product)
+        this.http.post('http://localhost:8080/api/products',this.product)
           .subscribe({
             next: (data: any) => {
             this.product = data;
@@ -83,18 +73,16 @@ export class AddproductComponent implements OnInit{
           }
       else{
         this.product.image= prod.value.image
-        this.product.brandId= prod.value.brand
         this.product.productName= prod.value.nameProduct
-        this.product.tagId= prod.value.tag
         this.product.detail= prod.value.detail
         this.product.model= prod.value.model
         this.product.price= prod.value.price
         this.product.stock= prod.value.stock
         this.product.description= prod.value.description
-        this.product.storeAvailable= true
-        this.product.deliveryAvailable= false
+        this.product.storeAvailable= 1
+        this.product.deliveryAvailable= 1
         
-        this.http.post('http://localhost:8080/products',this.product)
+        this.http.post('http://localhost:8080/api/products',this.product)
         .subscribe({
           next: (data: any) => {
           this.product = data;
@@ -123,18 +111,16 @@ export class AddproductComponent implements OnInit{
       if(prod.value.deliveryAvailable === "true")
       {
         this.product.image= prod.value.image
-        this.product.brandId= prod.value.brand
         this.product.productName= prod.value.nameProduct
-        this.product.tagId= prod.value.tag
         this.product.detail= prod.value.detail
         this.product.model= prod.value.model
         this.product.price= prod.value.price
         this.product.stock= prod.value.stock
         this.product.description= prod.value.description
-        this.product.storeAvailable= false
-        this.product.deliveryAvailable= true
+        this.product.storeAvailable= 1
+        this.product.deliveryAvailable= 1
         
-        this.http.post('http://localhost:8080/products',this.product)
+        this.http.post('http://localhost:8080/api/products',this.product)
         .subscribe({
           next: (data: any) => {
           this.product = data;
@@ -159,18 +145,18 @@ export class AddproductComponent implements OnInit{
       }
       else{
         this.product.image= prod.value.image
-        this.product.brandId= prod.value.brand
+
         this.product.productName= prod.value.nameProduct
-        this.product.tagId= prod.value.tag
+
         this.product.detail= prod.value.detail
         this.product.model= prod.value.model
         this.product.price= prod.value.price
         this.product.stock= prod.value.stock
         this.product.description= prod.value.description
-        this.product.storeAvailable= false
-        this.product.deliveryAvailable= false
+        this.product.storeAvailable= 1
+        this.product.deliveryAvailable= 1
         
-        this.http.post('http://localhost:8080/products',this.product)
+        this.http.post('http://localhost:8080/api/products',this.product)
         .subscribe({
           next: (data: any) => {
           this.product = data;
