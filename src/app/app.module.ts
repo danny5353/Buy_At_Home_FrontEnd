@@ -108,6 +108,15 @@ import { DatalleproductoComponent } from './datalleproducto/datalleproducto.comp
     DatalleproductoComponent,
     ],
   imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    RouterModule,
+    AppRoutingModule,
+    SimpleNotificationsModule.forRoot(),
+    BrowserAnimationsModule,
+    NgbModule,
+    ReactiveFormsModule,
     APP_ROUTING
   ],
   providers: [UserService, VoucherService,UsuarioService,ClienteService],
