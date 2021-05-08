@@ -9,6 +9,7 @@ import { NavbaradminComponent } from './navbaradmin/navbaradmin.component';
 import { NavbarenviosComponent } from './navbarenvios/navbarenvios.component';
 import { NavbarventasComponent } from './navbarventas/navbarventas.component';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
+import { PerfilusuarioComponent } from './perfilusuario/perfilusuario.component';
 const routes: Routes = [
   {
     path: 'modal',
@@ -45,6 +46,10 @@ const routes: Routes = [
   {
     path: 'loginadmin',
     component: LoginadminComponent,
+  },
+  {
+    path: 'perfilusuario',
+    component: PerfilusuarioComponent,
   }
 ];
 

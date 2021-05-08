@@ -55,7 +55,6 @@ import { HomeencargadoenviosComponent } from './homeencargadoenvios/homeencargad
 import { NavbarenviosComponent } from './navbarenvios/navbarenvios.component';
 import { NavbarventasComponent } from './navbarventas/navbarventas.component';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
-import { MetodopagoComponent } from './metodopago/metodopago.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +92,6 @@ import { MetodopagoComponent } from './metodopago/metodopago.component';
     NavbarenviosComponent,
     NavbarventasComponent,
     LoginadminComponent,
-    MetodopagoComponent
     ],
   imports: [
     BrowserModule,
