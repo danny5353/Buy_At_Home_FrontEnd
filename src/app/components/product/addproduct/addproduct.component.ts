@@ -33,9 +33,9 @@ export class AddproductComponent implements OnInit{
   }
 
   createProduct(Message:any ,prod: NgForm){
-    if(prod.value.storeAvailable === "true")
+    if(prod.value.storeAvailable === "1")
     {
-      if(prod.value.deliveryAvailable === "true")
+      if(prod.value.deliveryAvailable === "1")
       {
         this.product.image= prod.value.image
         this.product.productName= prod.value.nameProduct
@@ -47,7 +47,7 @@ export class AddproductComponent implements OnInit{
         this.product.storeAvailable= 1
         this.product.deliveryAvailable= 1
         
-        this.http.post('http://localhost:8080/api/products',this.product)
+        this.http.post('http://localhost:8080/api/productos',this.product)
           .subscribe({
             next: (data: any) => {
             this.product = data;
@@ -82,7 +82,7 @@ export class AddproductComponent implements OnInit{
         this.product.storeAvailable= 1
         this.product.deliveryAvailable= 1
         
-        this.http.post('http://localhost:8080/api/products',this.product)
+        this.http.post('http://localhost:8080/api/productos',this.product)
         .subscribe({
           next: (data: any) => {
           this.product = data;
@@ -108,7 +108,7 @@ export class AddproductComponent implements OnInit{
     }
     else
     {
-      if(prod.value.deliveryAvailable === "true")
+      if(prod.value.deliveryAvailable === "1")
       {
         this.product.image= prod.value.image
         this.product.productName= prod.value.nameProduct
@@ -120,7 +120,7 @@ export class AddproductComponent implements OnInit{
         this.product.storeAvailable= 1
         this.product.deliveryAvailable= 1
         
-        this.http.post('http://localhost:8080/api/products',this.product)
+        this.http.post('http://localhost:8080/api/productos',this.product)
         .subscribe({
           next: (data: any) => {
           this.product = data;
@@ -156,7 +156,7 @@ export class AddproductComponent implements OnInit{
         this.product.storeAvailable= 1
         this.product.deliveryAvailable= 1
         
-        this.http.post('http://localhost:8080/api/products',this.product)
+        this.http.post('http://localhost:8080/api/productos',this.product)
         .subscribe({
           next: (data: any) => {
           this.product = data;
