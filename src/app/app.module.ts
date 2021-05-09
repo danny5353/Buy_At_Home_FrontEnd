@@ -56,6 +56,8 @@ import { NavbarenviosComponent } from './navbarenvios/navbarenvios.component';
 import { NavbarventasComponent } from './navbarventas/navbarventas.component';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
 import { ListadoPedidosComponent } from './listado-pedidos/listado-pedidos.component';
+import { EditarpagoComponent } from './editarpago/editarpago.component';
+import { EditarclienteComponent } from './editarcliente/editarcliente.component';
 
 @NgModule({
   declarations: [
@@ -94,6 +96,8 @@ import { ListadoPedidosComponent } from './listado-pedidos/listado-pedidos.compo
     NavbarventasComponent,
     LoginadminComponent,
     ListadoPedidosComponent,
+    EditarpagoComponent,
+    EditarclienteComponent,
     ],
   imports: [
     BrowserModule,
