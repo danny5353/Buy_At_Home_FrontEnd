@@ -58,6 +58,7 @@ import { LoginadminComponent } from './loginadmin/loginadmin.component';
 import { ListadoPedidosComponent } from './listado-pedidos/listado-pedidos.component';
 import { EditarpagoComponent } from './editarpago/editarpago.component';
 import { EditarclienteComponent } from './editarcliente/editarcliente.component';
+import { TarjetaComponent } from './tarjeta/tarjeta.component';
 
 @NgModule({
   declarations: [
@@ -98,6 +99,7 @@ import { EditarclienteComponent } from './editarcliente/editarcliente.component'
     ListadoPedidosComponent,
     EditarpagoComponent,
     EditarclienteComponent,
+    TarjetaComponent,
     ],
   imports: [
     BrowserModule,
