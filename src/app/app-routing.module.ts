@@ -10,6 +10,8 @@ import { NavbarenviosComponent } from './navbarenvios/navbarenvios.component';
 import { NavbarventasComponent } from './navbarventas/navbarventas.component';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
 import { PerfilusuarioComponent } from './perfilusuario/perfilusuario.component';
+import { EditarclienteComponent } from './editarcliente/editarcliente.component';
+import { ProductoscategoriaComponent } from './productoscategoria/productoscategoria.component';
 const routes: Routes = [
   {
     path: 'modal',
@@ -50,6 +52,14 @@ const routes: Routes = [
   {
     path: 'perfilusuario',
     component: PerfilusuarioComponent,
+  },
+  {
+    path: 'editarcliente',
+    component: EditarclienteComponent,
+  },
+  {
+    path: 'productoscategoria',
+    component: ProductoscategoriaComponent,
   }
 ];
 

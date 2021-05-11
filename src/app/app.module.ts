@@ -59,6 +59,7 @@ import { ListadoPedidosComponent } from './listado-pedidos/listado-pedidos.compo
 import { EditarpagoComponent } from './editarpago/editarpago.component';
 import { EditarclienteComponent } from './editarcliente/editarcliente.component';
 import { TarjetaComponent } from './tarjeta/tarjeta.component';
+import { ProductoscategoriaComponent } from './productoscategoria/productoscategoria.component';
 
 @NgModule({
   declarations: [
@@ -100,6 +101,7 @@ import { TarjetaComponent } from './tarjeta/tarjeta.component';
     EditarpagoComponent,
     EditarclienteComponent,
     TarjetaComponent,
+    ProductoscategoriaComponent,
     ],
   imports: [
     BrowserModule,
