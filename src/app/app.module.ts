@@ -61,6 +61,7 @@ import { EditarclienteComponent } from './editarcliente/editarcliente.component'
 import { TarjetaComponent } from './tarjeta/tarjeta.component';
 import { ProductoscategoriaComponent } from './productoscategoria/productoscategoria.component';
 import { DetailordersComponent } from './detailorders/detailorders.component';
+import { MenuopcionesComponent } from './menuopciones/menuopciones.component';
 
 @NgModule({
   declarations: [
@@ -104,6 +105,7 @@ import { DetailordersComponent } from './detailorders/detailorders.component';
     TarjetaComponent,
     ProductoscategoriaComponent,
     DetailordersComponent,
+    MenuopcionesComponent,
     ],
   imports: [
     BrowserModule,
