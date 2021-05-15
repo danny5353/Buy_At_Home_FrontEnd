@@ -62,6 +62,7 @@ import { ProductoscategoriaComponent } from './productoscategoria/productoscateg
 import { DetailordersComponent } from './detailorders/detailorders.component';
 import { MenuopcionesComponent } from './menuopciones/menuopciones.component';
 import { EditarproductoComponent } from './editarproducto/editarproducto.component';
+import { InicioclienteComponent } from './iniciocliente/iniciocliente.component';
 
 @NgModule({
   declarations: [
@@ -106,6 +107,7 @@ import { EditarproductoComponent } from './editarproducto/editarproducto.compone
     DetailordersComponent,
     MenuopcionesComponent,
     EditarproductoComponent,
+    InicioclienteComponent,
     ],
   imports: [
     BrowserModule,

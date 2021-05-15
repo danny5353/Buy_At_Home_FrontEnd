@@ -13,6 +13,7 @@ import { PerfilusuarioComponent } from './perfilusuario/perfilusuario.component'
 import { EditarclienteComponent } from './editarcliente/editarcliente.component';
 import { ProductoscategoriaComponent } from './productoscategoria/productoscategoria.component';
 import { MenuopcionesComponent } from './menuopciones/menuopciones.component';
+import { InicioclienteComponent } from './iniciocliente/iniciocliente.component';
 const routes: Routes = [
   {
     path: 'modal',
@@ -65,6 +66,10 @@ const routes: Routes = [
   {
     path: 'menuopciones',
     component: MenuopcionesComponent,
+  },
+  {
+    path: 'iniciocliente',
+    component: InicioclienteComponent,
   }
 ];
 
