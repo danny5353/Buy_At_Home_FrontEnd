@@ -63,6 +63,7 @@ import { DetailordersComponent } from './detailorders/detailorders.component';
 import { MenuopcionesComponent } from './menuopciones/menuopciones.component';
 import { EditarproductoComponent } from './editarproducto/editarproducto.component';
 import { InicioclienteComponent } from './iniciocliente/iniciocliente.component';
+import { OpcionesadminComponent } from './opcionesadmin/opcionesadmin.component';
 
 @NgModule({
   declarations: [
@@ -108,6 +109,7 @@ import { InicioclienteComponent } from './iniciocliente/iniciocliente.component'
     MenuopcionesComponent,
     EditarproductoComponent,
     InicioclienteComponent,
+    OpcionesadminComponent,
     ],
   imports: [
     BrowserModule,
