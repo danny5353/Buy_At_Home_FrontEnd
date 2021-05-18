@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 
 //Modules
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,6 +9,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+import { registerLocaleData} from '@angular/common';
+import localeES from '@angular/common/locales/es';
+registerLocaleData(localeES, 'es');
 
 //Routes
 import { APP_ROUTING } from "./app.routes";
@@ -55,15 +59,16 @@ import { HomeencargadoenviosComponent } from './homeencargadoenvios/homeencargad
 import { NavbarenviosComponent } from './navbarenvios/navbarenvios.component';
 import { NavbarventasComponent } from './navbarventas/navbarventas.component';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
-import { ListadoPedidosComponent } from './listado-pedidos/listado-pedidos.component';
-import { EditarclienteComponent } from './editarcliente/editarcliente.component';
-import { TarjetaComponent } from './tarjeta/tarjeta.component';
-import { ProductoscategoriaComponent } from './productoscategoria/productoscategoria.component';
-import { DetailordersComponent } from './detailorders/detailorders.component';
-import { MenuopcionesComponent } from './menuopciones/menuopciones.component';
-import { EditarproductoComponent } from './editarproducto/editarproducto.component';
-import { InicioclienteComponent } from './iniciocliente/iniciocliente.component';
-import { OpcionesadminComponent } from './opcionesadmin/opcionesadmin.component';
+import { ProductoService } from './productos/producto.service';
+import { ProductosComponent } from './productos/productos.component';
+import { FormpComponent } from './productos/formp.component';
+import { FormpeditComponent } from './productos/formpedit.component';
+import { DetalleComponent } from './productos/detalle/detalle.component';
+import {PaginatorpComponent} from './components/paginator/paginatorp.component';
+import { PaginatoruComponent } from './components/paginator/paginatoru.component';
+import {PaginatorComponent} from './components/paginator/paginator.component';
+import { FooterComponent } from './footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -101,15 +106,14 @@ import { OpcionesadminComponent } from './opcionesadmin/opcionesadmin.component'
     NavbarenviosComponent,
     NavbarventasComponent,
     LoginadminComponent,
-    ListadoPedidosComponent,
-    EditarclienteComponent,
-    TarjetaComponent,
-    ProductoscategoriaComponent,
-    DetailordersComponent,
-    MenuopcionesComponent,
-    EditarproductoComponent,
-    InicioclienteComponent,
-    OpcionesadminComponent,
+    FormpComponent,
+    FormpeditComponent,
+    PaginatorpComponent,
+    ProductosComponent,
+    DetalleComponent,
+    PaginatoruComponent,
+    PaginatorComponent,
+    FooterComponent
     ],
   imports: [
     BrowserModule,
@@ -123,7 +127,7 @@ import { OpcionesadminComponent } from './opcionesadmin/opcionesadmin.component'
     ReactiveFormsModule,
     APP_ROUTING
   ],
-  providers: [UserService, VoucherService,UsuarioService,ClienteService],
+  providers: [ProductoService, UserService, VoucherService,UsuarioService,ClienteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

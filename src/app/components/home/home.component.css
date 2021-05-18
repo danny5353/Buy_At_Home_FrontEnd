@@ -725,21 +725,3 @@ a {
       transform: rotate(360deg);
     }
   }
-  
-  #footer {
-    background: #343b40;
-    padding: 30px 0;
-    color: #fff;
-    font-size: 14px;
-  }
-  
-  #footer .copyright {
-    text-align: center;
-  }
-  
-  #footer .credits {
-    padding-top: 10px;
-    text-align: center;
-    font-size: 0.0000001mm;
-    color: #ccc;
-  }

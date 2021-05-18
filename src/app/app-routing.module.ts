@@ -9,11 +9,7 @@ import { NavbaradminComponent } from './navbaradmin/navbaradmin.component';
 import { NavbarenviosComponent } from './navbarenvios/navbarenvios.component';
 import { NavbarventasComponent } from './navbarventas/navbarventas.component';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
-import { PerfilusuarioComponent } from './perfilusuario/perfilusuario.component';
-import { EditarclienteComponent } from './editarcliente/editarcliente.component';
-import { ProductoscategoriaComponent } from './productoscategoria/productoscategoria.component';
-import { MenuopcionesComponent } from './menuopciones/menuopciones.component';
-import { InicioclienteComponent } from './iniciocliente/iniciocliente.component';
+import { FooterComponent } from './footer/footer.component';
 const routes: Routes = [
   {
     path: 'modal',
@@ -52,24 +48,8 @@ const routes: Routes = [
     component: LoginadminComponent,
   },
   {
-    path: 'perfilusuario',
-    component: PerfilusuarioComponent,
-  },
-  {
-    path: 'editarcliente',
-    component: EditarclienteComponent,
-  },
-  {
-    path: 'productoscategoria',
-    component: ProductoscategoriaComponent,
-  },
-  {
-    path: 'menuopciones',
-    component: MenuopcionesComponent,
-  },
-  {
-    path: 'iniciocliente',
-    component: InicioclienteComponent,
+    path: 'footer',
+    component: FooterComponent,
   }
 ];
 

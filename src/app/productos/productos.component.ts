@@ -1,8 +1,10 @@
+import { ModalService } from './detalle/modal.service';
 import { Component, OnInit } from '@angular/core';
 import { Producto } from './producto';
 import { ProductoService } from './producto.service';
 import Swal from 'sweetalert2';
 import { ActivatedRoute} from '@angular/router';
+import { AuthService } from '../components/usuarios/auth.service';
 
 @Component({
   selector: 'app-productos',
@@ -12,12 +14,13 @@ export class ProductosComponent implements OnInit {
   productos!: Producto[]
   paginadorp: any;
 
-  constructor(private productoService: ProductoService, 
+  constructor(private productoService: ProductoService, public authService: AuthService,
+    private modalService: ModalService,
     private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe (params =>{
-      let page: number = +params.get('page'); 
+      let page: number = +params.get('page');   
       if(!page){
         page=0;
       }
@@ -46,14 +49,16 @@ export class ProductosComponent implements OnInit {
           response => {
             this.productos = this.productos.filter(vou => vou !== producto)
             Swal.fire(
-              'Comprobante Eliminado',
-              `Comprobante ${producto.productName} eliminado con exito.`,
+              'Producto Eliminado',
+              `Producto ${producto.productName} eliminado con exito.`,
               'success'
             )
           }
         )
         
       }
-    })
+    });
   }
+
+ 
 }

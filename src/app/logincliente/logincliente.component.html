@@ -20,8 +20,8 @@
                 <button type="submit" class="btn btn-primary">Log in</button>
               </form>
               <hr>
-              <button ngbDropdownItem>Registrar</button>
-              <button ngbDropdownItem>Olvidé mi contraseña</button>
+              <button ngbDropdownItem [routerLink]="['/user/signup']" routerLinkActive="router-link-active" >
+                Registrarme</button>
         </div>
     </div> 
   </div>
