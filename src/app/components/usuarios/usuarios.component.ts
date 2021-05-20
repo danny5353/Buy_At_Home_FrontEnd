@@ -21,7 +21,7 @@ export class UsuariosComponent implements OnInit {
     ngOnInit() {
         
         this.activatedRoute.paramMap.subscribe( params => {
-          let page: number = +params.get('page');
+          let page: number = +params.get('page')!;
 
           if (!page){
             page =0;

@@ -11,8 +11,8 @@ import { AuthService } from '../components/usuarios/auth.service';
   templateUrl: './productos.component.html'
 })
 export class ProductosComponent implements OnInit {
-  productos!: Producto[]
-  paginadorp: any;
+  productos!: Producto [];
+  paginadorp!: any ; 
 
   constructor(private productoService: ProductoService, public authService: AuthService,
     private modalService: ModalService,
@@ -20,7 +20,7 @@ export class ProductosComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe (params =>{
-      let page: number = +params.get('page');   
+      let page: number = +(params.get('page'))!;   
       if(!page){
         page=0;
       }
@@ -44,7 +44,6 @@ export class ProductosComponent implements OnInit {
       confirmButtonText: 'Si, eliminar'
       }).then((result) => {
       if (result.isConfirmed) {
-
         this.productoService.delete(producto.productId).subscribe(
           response => {
             this.productos = this.productos.filter(vou => vou !== producto)

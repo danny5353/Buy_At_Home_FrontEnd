@@ -21,7 +21,7 @@ export class DetalleComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe( params => {
-      let productId: number = +params.get('productId'); 
+      let productId: number = +params.get('productId')!; 
 
       if (productId){
          this.productoService.getProduct(productId).subscribe(producto => {
@@ -38,7 +38,7 @@ export class DetalleComponent implements OnInit {
     console.log(this.fotoSeleccionada);
     if(this.fotoSeleccionada.type.indexOf('image') <0){
       swal.fire('Error seleccionar imagen ', 'El archivo debe ser del tipo imagen', 'error') 
-      this.fotoSeleccionada = null;
+      this.fotoSeleccionada = null!;
     }
   }
 
@@ -50,7 +50,7 @@ export class DetalleComponent implements OnInit {
     this.productoService.subirFoto(this.fotoSeleccionada, this.producto.productId)
     .subscribe(event =>{
       if(event.type === HttpEventType.UploadProgress){
-        this.progreso = Math.round((event.loaded/event.total)*100);
+        this.progreso = Math.round((event.loaded/(event.total)!)*100);
       } else if(event.type === HttpEventType.Response){
         let response: any = event.body;
         this.producto = response.producto as Producto;

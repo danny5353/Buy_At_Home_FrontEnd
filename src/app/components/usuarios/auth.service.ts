@@ -8,8 +8,8 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  private _usuario: Usuario | undefined;
-  private _token: string | undefined;
+  private _usuario!: Usuario ;
+  private _token!: string ;
 
   constructor(private http: HttpClient) { }
 
@@ -17,7 +17,7 @@ export class AuthService {
     if (this._usuario!=null){
       return this._usuario;
     } else if(this._usuario == null && sessionStorage.getItem('usuario') !=null){
-      this._usuario = JSON.parse(sessionStorage.getItem('usuario')) as Usuario;   
+      this._usuario = JSON.parse(sessionStorage.getItem('usuario')!) as Usuario;   
       return this._usuario;
     }
     return new Usuario();
@@ -27,10 +27,10 @@ export class AuthService {
     if (this._token!=null){
       return this._token;
     } else if(this._token == null && sessionStorage.getItem('token') !=null){
-      this._token = sessionStorage.getItem('token');
+      this._token = sessionStorage.getItem('token')!;
       return this._token;
     }
-    return null;
+    return null!;
   }
 
   login(usuario:Usuario):Observable<any>{
@@ -88,8 +88,8 @@ export class AuthService {
   }
 
   logout():void{
-    this._token = null;
-    this._usuario = null; 
+    this._token = null!;
+    this._usuario = null!; 
     sessionStorage.clear;
     sessionStorage.removeItem('token');
     sessionStorage.removeItem('usuario');
