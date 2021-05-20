@@ -114,7 +114,7 @@ import { FooterComponent } from './footer/footer.component';
     PaginatoruComponent,
     PaginatorComponent,
     FooterComponent,
-    SignupComponent
+    SignupComponent,
     ],
   imports: [
     BrowserModule,
