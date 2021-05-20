@@ -1,14 +1,7 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 
 //Modules
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from "@angular/router";
-import { HttpClientModule } from '@angular/common/http';
-import { SimpleNotificationsModule } from 'angular2-notifications';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 import { registerLocaleData} from '@angular/common';
 import localeES from '@angular/common/locales/es';
