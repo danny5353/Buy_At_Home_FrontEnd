@@ -5,6 +5,8 @@ import { ProductoService } from './producto.service';
 import Swal from 'sweetalert2';
 import { ActivatedRoute} from '@angular/router';
 import { AuthService } from '../components/usuarios/auth.service';
+import { tap } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-productos',
@@ -13,27 +15,39 @@ import { AuthService } from '../components/usuarios/auth.service';
 export class ProductosComponent implements OnInit {
   productos!: Producto [];
   paginadorp!: any ; 
-
   constructor(private productoService: ProductoService, public authService: AuthService,
     private modalService: ModalService,
     private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.activatedRoute.paramMap.subscribe (params =>{
-      let page: number = +(params.get('page'))!;   
-      if(!page){
-        page=0;
-      }
-    this.productoService.getProducto(page).subscribe(
-      response => {
-        this.productos = response.content as Producto[]; 
-        this.paginadorp= response;
-      });
-    });
-  }
 
-  delete(producto: Producto): void{
-            
+    this.activatedRoute.paramMap.subscribe(params => {
+    let page: number = +params.get('page')!;   
+
+    if (!page){
+      page =0;
+    }
+
+    this.productoService.getProducto(page)
+    .pipe(
+      tap(response => {
+        console.log('ClientesComponent: tap 3');
+       (response.content as Producto[]).forEach(producto => console.log(producto.productName));
+    })
+    ).subscribe(response => {
+      this.productos = response.content as Producto[];
+      this.paginadorp = response;
+    });
+  });
+}
+
+
+
+
+
+
+
+  delete(producto: Producto): void{   
     Swal.fire({
       title: '¿Esta Seguro?',
       text: `¿Seguro que desea eliminar el producto ${producto.productName}?`,

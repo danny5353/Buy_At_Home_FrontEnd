@@ -48,7 +48,7 @@ export class ProductoService{
     }
     
     
-    getProducto(page: number): Observable<any[]> {
+    getProducto(page: number): Observable<any> {
         return this.http.get(this.urlEndPoint +'/page/' + page).pipe(
             tap( (response: any) =>{
                 (response.content as Producto[]).forEach(producto => {
