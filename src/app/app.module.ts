@@ -68,7 +68,6 @@ import {PaginatorpComponent} from './components/paginator/paginatorp.component';
 import { PaginatoruComponent } from './components/paginator/paginatoru.component';
 import {PaginatorComponent} from './components/paginator/paginator.component';
 import { FooterComponent } from './footer/footer.component';
-import { StripeComponent } from './stripe/stripe.component';
 
 
 @NgModule({
@@ -115,7 +114,7 @@ import { StripeComponent } from './stripe/stripe.component';
     PaginatoruComponent,
     PaginatorComponent,
     FooterComponent,
-    StripeComponent
+    SignupComponent
     ],
   imports: [
     BrowserModule,
